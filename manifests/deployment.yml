@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: changweizhangpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: changweizhangpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: changweizhangpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: changweizhangpipelinesjavascriptdocker 
+          image: cwcontainerregistry1.azurecr.io/changweizhangpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
